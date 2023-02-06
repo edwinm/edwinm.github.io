@@ -1,18 +1,273 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>edwinm.github.io</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub home of Edwin Martin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="">
+  <meta name="theme-color" content="#dee1d1"/>
+  <style>
+    @font-face {
+      font-family: 'MavenPro';
+      src: url('fonts/mavenpro/maven_pro_regular-webfont.woff2') format('woff2');
+      font-display: swap;
+    }
 
-        <h1>edwinm.github.io</h1>
+    @font-face {
+      font-family: 'MavenPro';
+      src: url('fonts/mavenpro/maven_pro_bold-webfont.woff2') format('woff2');
+      font-weight: bold;
+      font-display: swap;
+    }
 
-        <p>Right now still a placeholder.</p>
-            
-    </body>
+    html {
+      box-sizing: border-box;
+      min-height: 100%;
+      color: #202;
+      background-color: #edeaea;
+      font-family: MavenPro, Trebuchet MS, Arial, Helvetica, sans-serif;
+      overflow: hidden;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      height: 100%;
+      margin: 0;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+    }
+
+    a {
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+
+    a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: orange;
+    }
+
+    ::-moz-selection, ::selection {
+      background-color: #fc0;
+      color: black;
+    }
+
+    h1, h2, h3 {
+      text-rendering: optimizeLegibility;
+    }
+
+    .reset, .reset > li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    main {
+      padding: calc(30vh - 10rem) 1rem 2rem;
+      margin: 0 calc(50vw - 22rem);
+      height: calc(100vh - 6rem);
+      overflow-y: auto;
+    }
+
+    @media (max-width: 50rem) {
+      main {
+        margin-left: 35px;
+        margin-right: 20px;
+      }
+    }
+
+    @media (max-width: 40rem) {
+      .links li {
+        min-width: 40%;
+      }
+    }
+
+    .swirls {
+      position: absolute;
+      top: calc(30vh - 1rem - 18vw);
+      width: 100vw;
+      z-index: -1;
+    }
+
+    path {
+      position: relative;
+      left: -100px;
+    }
+
+    .panel {
+      position: relative;
+      display: inline-block;
+      width: 400px;
+      padding: 10px;
+      margin-left: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .panel label {
+      display: block;
+    }
+
+    .panel input[type=range] {
+      position: absolute;
+      left: 100px;
+      width: 280px;
+    }
+
+    .controls {
+      position: absolute;
+      transition: all 0.25s ease;
+      width: 100vw;
+      bottom: 10px;
+      white-space: nowrap;
+      overflow-x: scroll;
+      opacity: 1;
+    }
+
+    .controls.hidden {
+      opacity: 0;
+      bottom: -50px;
+    }
+
+    .cog {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 20px;
+      right: 20px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      color: black;
+    }
+
+    .cog:hover {
+      color: brown;
+    }
+
+    .cog:hover svg {
+      left: 15px;
+      top: 15px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .cog:active {
+      color: orange;
+    }
+
+    .cog svg {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      width: 40px;
+      height: 40px;
+      transition: all 0.25s ease;
+    }
+
+    #swirl1 {
+      animation: 83s linear infinite move-swirl1;
+    }
+
+    #swirl2 {
+      animation: 19s linear infinite move-swirl2;
+    }
+
+    #swirl3 {
+      animation: 111s linear infinite move-swirl3;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #swirl1, #swirl2, #swirl3 {
+        animation: none;
+      }
+    }
+
+    @keyframes move-swirl1 {
+      from {
+        transform: translate(0);
+      }
+      to {
+        transform: translate(-1000px);
+      }
+    }
+
+    @keyframes move-swirl2 {
+      from {
+        transform: translate(0);
+      }
+      to {
+        transform: translate(-700px);
+      }
+    }
+
+    @keyframes move-swirl3 {
+      from {
+        transform: translate(0);
+      }
+      to {
+        transform: translate(-800px);
+      }
+    }
+
+    @media (max-width: 320px) {
+      html {
+        overflow: auto;
+      }
+    }
+  </style>
+
+  <script src="bootstrap.js" defer></script>
+</head>
+
+<body>
+
+<button class="cog" onclick="loadEditor()">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" xml:space="preserve">
+      <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+        <path fill="currentColor" d="M4530.6,5003c-29.9-4.3-160-23.5-290.2-42.7l-236.9-34.1l-147.2-544.1c-91.7-341.4-160-552.6-179.2-563.3c-17.1-10.7-113.1-51.2-209.1-91.7l-179.2-74.7l-467.3,266.7c-258.2,149.4-486.5,273.1-505.7,279.5c-64,14.9-465.1-300.9-785.2-620.9c-320.1-320-635.8-721.2-620.9-785.2c6.4-19.2,130.2-247.5,279.5-505.7l266.7-467.3l-74.7-179.2c-40.6-96-81.1-192-91.7-209.1c-10.7-19.2-221.9-87.5-563.3-179.2l-544.1-147.2l-40.5-236.8c-55.5-337.1-55.5-1182.1,0-1517.1L182.1-886l544.1-147.2c341.4-93.9,552.6-162.1,563.3-181.4c10.7-17.1,51.2-113.1,91.7-209.1l74.7-179.2l-266.7-467.3c-149.4-258.2-273.1-486.5-279.5-505.7c-14.9-64,300.9-465.1,620.9-785.2c324.3-322.2,721.2-635.8,785.2-620.9c21.3,6.4,247.5,132.3,505.7,279.5l467.3,268.8l177.1-76.8c98.1-40.5,194.2-81.1,211.2-91.8c19.2-10.7,87.5-221.9,179.2-563.3l147.2-544.1l236.9-40.5c337.1-55.5,1182.1-55.5,1519.2,0l234.7,40.5l149.3,544.1c91.8,341.4,160,552.6,179.2,563.3c17.1,10.7,113.1,51.2,209.1,91.8l179.2,74.7l467.3-266.7c258.2-149.4,486.5-273.1,505.7-279.5c64-14.9,463,300.9,785.2,620.9c320,322.2,635.8,721.2,620.9,785.2c-6.4,19.2-130.2,247.5-279.5,505.7L8544-1602.9l74.7,179.2c40.5,96,81.1,192,91.8,209.1c10.7,19.2,221.9,87.5,563.3,179.2L9817.9-886l40.5,234.7c55.5,337.1,55.5,1182.1,0,1519.2l-40.5,236.8L9273.8,1252c-341.4,91.7-552.6,160-563.3,179.2c-10.7,17.1-51.2,113.1-91.8,209.1l-74.7,179.2l266.7,467.3c149.4,258.2,273.1,486.5,279.5,505.7c14.9,64-300.9,465.2-620.9,785.2c-320.1,320.1-721.2,635.8-785.2,620.9c-19.2-6.4-247.5-130.2-505.7-279.5l-467.3-266.7L6532,3727c-96,40.5-192,83.2-209.1,91.7c-19.2,10.7-87.5,221.9-179.2,563.3l-147.2,544.1l-226.2,38.4C5556.9,4998.7,4673.5,5026.4,4530.6,5003z M5563.3,4550.6l83.2-14.9l136.6-501.4c72.6-275.2,140.8-514.2,149.4-529.2c10.7-14.9,89.6-51.2,177.1-81.1c87.5-29.9,262.4-102.4,386.2-162.2l226.2-106.7l473.7,271l473.7,271l89.6-59.8c115.2-78.9,691.3-652.9,770.3-770.3l59.7-89.6l-271-471.5l-273.1-471.5l108.8-228.3c59.7-125.9,132.3-298.7,160-384.1c29.9-85.3,59.7-162.2,66.2-170.7c8.5-6.4,247.5-76.8,531.3-153.6L9427.4,757l19.2-96c25.6-121.6,25.6-983.6,0-1105.2l-19.2-96L8926-674.8c-275.3-72.5-514.2-140.8-529.2-149.4c-14.9-10.7-51.2-89.6-81.1-177.1c-29.9-87.5-102.4-262.4-162.2-388.3l-106.7-226.2l271-473.7l271-471.5l-59.7-89.6c-78.9-117.4-652.9-691.3-770.3-770.3l-89.6-59.7l-471.5,271l-473.7,271l-226.2-106.7c-125.9-59.7-300.9-132.3-388.3-162.2c-87.5-29.9-166.4-66.1-177.1-81.1c-8.5-14.9-76.8-253.9-149.4-529.1l-134.4-501.4l-96-19.2c-121.6-25.6-983.6-25.6-1105.2,0l-96,19.2l-140.8,516.4c-76.8,283.8-147.2,522.8-153.6,531.3c-8.5,6.4-85.4,36.3-170.7,66.2c-85.3,27.7-258.2,100.3-384.1,160l-228.3,108.8l-471.6-273.1l-471.5-271l-89.6,59.7c-117.4,78.9-691.3,655-770.2,770.3l-59.8,89.6l271,473.7l271,473.7l-106.7,226.2c-59.7,123.7-132.3,296.6-160,381.9c-29.9,85.3-59.7,162.2-68.3,170.7c-6.4,8.6-245.4,76.8-529.1,155.8L572.6-540.3l-19.2,96c-25.6,121.6-25.6,983.6,0,1105.2l19.2,96L1089,897.8c283.8,76.8,522.7,147.2,531.3,153.6c6.4,8.5,36.3,85.3,66.1,170.7c27.7,85.3,100.3,258.2,160,384.1l106.7,226.2l-271,473.7l-271,471.5l59.8,89.6c78.9,117.3,652.9,691.3,770.2,770.3l89.6,59.8l471.5-271l471.6-273.1l228.3,108.8c125.9,59.8,300.9,132.3,388.3,162.2c87.5,29.9,166.4,66.1,175,81.1c8.5,14.9,74.7,249.6,147.2,518.5c72.5,271,138.7,497.1,145.1,505.7C4402.6,4580.5,5320,4597.6,5563.3,4550.6z"/>
+        <path fill="currentColor" d="M4594.6,2030.8c-772.4-168.6-1359.2-763.9-1519.2-1538.4c-55.5-260.3-42.7-655.1,25.6-894c247.5-866.3,1013.5-1453,1899-1453c1081.8,0,1963,881.2,1963,1963c0,885.5-584.6,1651.5-1453,1899C5279.5,2073.4,4840,2086.2,4594.6,2030.8z M5377.7,1589.1c672.1-172.8,1143.6-780.9,1143.6-1480.8c2.1-849.2-672.1-1523.4-1521.3-1521.3c-706.2,0-1305.8,467.3-1485,1158.6c-49.1,183.5-49.1,539.8-2.1,725.5c81.1,307.2,290.2,640.1,522.8,821.5C4426,1599.8,4916.8,1708.6,5377.7,1589.1z"/></g>
+    </svg>
+</button>
+
+<main>
+
+  <header>
+    <h1>edwinm.github.io</h1>
+    <h2>GitHub home of Edwin Martin</h2>
+
+    <p><a href="https://github.com/edwinm">My github profile</a></p>
+    <p><a href="https://github.com/edwinm?tab=repositories&q=&type=source&language=&sort=">My github repositories</a></p>
+  </header>
+
+</main>
+
+<svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" class="swirls">
+  <path id="swirl1"
+        d="M-275 244 C -68 340, 18 340, 225 244 C 432 148, 518 148, 725 244 C 932 340, 1018 340, 1225 244 C 1432 148, 1518 148, 1725 244 C 1932 340, 2018 340, 2225 244 C 2432 148, 2518 148, 2725 244"
+        stroke-width="275" fill="transparent" stroke="hsla(78, 73.9%, 37%, 0.202)"
+        style="transform: translate(-55.96px);"></path>
+  <path id="swirl2"
+        d="M-146 289 C -1.1 333, 59.1 333, 204 289 C 348.9 245, 409.1 245, 554 289 C 698.9 333, 759.1 333, 904 289 C 1048.9 245, 1109.1 245, 1254 289 C 1398.9 333, 1459.1 333, 1604 289 C 1748.9 245, 1809.1 245, 1954 289 C 2098.9 333, 2159.1 333, 2304 289 C 2448.9 245, 2509.1 245, 2654 289"
+        stroke-width="146" fill="transparent" stroke="hsla(53, 57.4%, 21.9%, 0.296)"
+        style="transform: translate(-170.678px);"></path>
+  <path id="swirl3"
+        d="M-40 177 C 125.6 210, 194.4 210, 360 177 C 525.6 144, 594.4 144, 760 177 C 925.6 210, 994.4 210, 1160 177 C 1325.6 144, 1394.4 144, 1560 177 C 1725.6 210, 1794.4 210, 1960 177 C 2125.6 144, 2194.4 144, 2360 177 C 2525.6 210, 2594.4 210, 2760 177 C 2925.6 144, 2994.4 144, 3160 177"
+        stroke-width="40" fill="transparent" stroke="hsla(26, 100%, 54.9%, 0.346)"
+        style="transform: translate(-33.576px);"></path>
+</svg>
+
+</body>
 </html>

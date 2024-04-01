@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>BlendBlastCSS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/edwinm/blend-blast-css/src/blendblast.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 80ch;
+            margin: auto;
+        }
+
+        h1 {
+            color: var(--🟥);
+        }
+
+        .pop-button {
+            color: var(--🟨);
+            background-color: color-mix(in lch, var(--🟨) 50%, var(--🟦));
+            border-color: color-mix(in lch, var(--🟨) 50%, var(--🟦));
+            padding: 15px 20px;
+            font-family: "Comic Sans MS", "Brush Script MT", sans-serif;
+            font-size: 20px;
+        }
+        .pop-button:active {
+            color: color-mix(in lch, var(--🟥) 50%, var(--🟦));
+            background-color: color-mix(in lch, var(--🟨) 80%, var(--🟦));
+            border-color: color-mix(in lch, var(--🟨) 80%, var(--🟦));
+        }
+
+        .theme1 {
+            color: color-mix(in lch, var(--🟫) 20%, var(--⬛));
+            background-color: color-mix(in lch, var(--🟫) 10%, var(--⬜));
+        }
+        .theme2 {
+            color: color-mix(in lch, var(--🟨) 20%, var(--🟦));
+            background-color: color-mix(in lch, var(--🟥) 20%, var(--⬜));
+        }
+        .theme3 {
+            color: color-mix(in lch, var(--⬜) 90%, var(--⬛));
+            background-color: color-mix(in lch, var(--⬜) 10%, var(--⬛));
+        }
+    </style>
+    <script>var currentTheme = 0</script>
+</head>
+<body id="content" class="theme1">
+
+<h1 class="title">Welcome to the BlendBlastCSS Demo Page!</h1>
+
+<p>Here, you can experience the electrifying power of our revolutionary CSS color framework firsthand.
+    With just a few lines of code, you can infuse your web projects with vibrant,
+    eye-catching colors that will leave your users dazzled and delighted.</p>
+
+<p>Ready to take your designs to the next level? Dive in and discover the endless possibilities of BlendBlastCSS
+    today!</p>
+
+
+<button class="pop-button"
+        onclick="currentTheme=++currentTheme%3;document.getElementById('content').className=`theme${currentTheme+1}`">
+    Try another theme!
+</button>
+
+<p>Prepare to embark on a journey of chromatic splendor as you invoke the
+    unparalleled power of BlendBlastCSS with but a single line of HTML incantation!</p>
+
+<pre>
+&lt;link rel="stylesheet" href="blendblast.css">
+</pre>
+
+<p>Behold, fellow digital voyagers, the epitome of web wizardry for this page encapsulated in the code snippet below!</p>
+
+<pre>
+&lt;style>
+    body {
+        font-family: sans-serif;
+        max-width: 80ch;
+        margin: auto;
+    }
+
+    h1 {
+        color: var(--🟥);
+    }
+
+    .pop-button {
+        color: var(--🟨);
+        background-color: color-mix(in lch, var(--🟨) 50%, var(--🟦));
+        border-color: color-mix(in lch, var(--🟨) 50%, var(--🟦));
+        padding: 15px 20px;
+        font-family: "Comic Sans MS", "Brush Script MT", sans-serif;
+        font-size: 20px;
+    }
+    .pop-button:active {
+        color: color-mix(in lch, var(--🟥) 50%, var(--🟦));
+        background-color: color-mix(in lch, var(--🟨) 80%, var(--🟦));
+        border-color: color-mix(in lch, var(--🟨) 80%, var(--🟦));
+    }
+
+    .theme1 {
+        color: color-mix(in lch, var(--🟫) 20%, var(--⬛));
+        background-color: color-mix(in lch, var(--🟫) 10%, var(--⬜));
+    }
+    .theme2 {
+        color: color-mix(in lch, var(--🟨) 20%, var(--🟦));
+        background-color: color-mix(in lch, var(--🟥) 20%, var(--⬜));
+    }
+    .theme3 {
+        color: color-mix(in lch, var(--⬜) 90%, var(--⬛));
+        background-color: color-mix(in lch, var(--⬜) 10%, var(--⬛));
+    }
+&lt;/style>
+</pre>
+
+<p>Remember, the only limit is your imagination. Let's make some digital magic happen! ✨🎨</p>
+
+
+</body>
+</html>

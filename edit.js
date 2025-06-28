@@ -329,10 +329,10 @@ var isLoaded;
 		"stroke": 275,
 		"slope": 207,
 		"height": 96,
-		"hue": 78,
-		"saturation": 739,
-		"luminance": 370,
-		"opacity": 200
+		"hue": 184,
+		"saturation": 1000,
+		"luminance": 431,
+		"opacity": 588
 	}, {
 		"speed": 61,
 		"top": 289,
@@ -340,10 +340,10 @@ var isLoaded;
 		"stroke": 146,
 		"slope": 207,
 		"height": 44,
-		"hue": 53,
-		"saturation": 574,
-		"luminance": 219,
-		"opacity": 296
+		"hue": 181,
+		"saturation": 743,
+		"luminance": 377,
+		"opacity": 628
 	}, {
 		"speed": 12,
 		"top": 177,
@@ -351,10 +351,10 @@ var isLoaded;
 		"stroke": 40,
 		"slope": 207,
 		"height": 33,
-		"hue": 26,
+		"hue": 52,
 		"saturation": 1000,
 		"luminance": 549,
-		"opacity": 346
+		"opacity": 628
 	}];
 
 	var panelsN = 3;

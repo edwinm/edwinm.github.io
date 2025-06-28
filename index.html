@@ -40,21 +40,24 @@
       margin: 0;
       -webkit-hyphens: auto;
       hyphens: auto;
+      font-size: 1.5rem;
     }
 
     a {
       text-decoration: none;
       white-space: nowrap;
-    }
-
-
-    a:hover {
       color: #000;
-      text-decoration: underline;
-    }
+      transition: all 250ms ease;
 
-    a:active {
-      color: orange;
+      &:hover {
+        color: blue;
+        text-decoration: underline;
+        letter-spacing: 0.05em;
+      }
+
+      &:active {
+        color: orange;
+      }
     }
 
     ::-moz-selection, ::selection {
@@ -73,12 +76,12 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 3.8rem;
     }
 
     main {
-      padding: calc(30vh - 10rem) 1rem 2rem;
-      margin: 0 calc(50vw - 14rem);
+      padding: calc(48vh - 25rem) 1rem 2rem;
+      margin: 0 calc(50vw - 20rem);
       height: calc(100vh - 6rem);
       overflow-y: auto;
     }
@@ -245,23 +248,6 @@
     </svg>
 </button>
 
-<main>
-
-  <header>
-    <h1>edwinm.github.io</h1>
-    <h2>GitHub home of Edwin Martin</h2>
-
-    <p><a href="https://github.com/edwinm">My GitHub profile</a></p>
-    <p><a href="https://github.com/edwinm?tab=repositories&q=&type=source&language=&sort=">My GitHub repositories</a></p>
-    <p><a href="https://bitstorm.org/">Bitstorm.org, my blog</a></p>
-    <p><a href="https://playgameoflife.com/">Play Game of Life</a></p>
-    <p><a href="https://twitter.com/edwinmdev">Edwin's tweets</a></p>
-    <p><a href="https://mastodon.social/@edwin">Edwin's toots</a></p>
-
-  </header>
-
-</main>
-
 <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" class="swirls">
   <path id="swirl1" d="M-275 244 C -68 340, 18 340, 225 244 C 432 148, 518 148, 725 244 C 932 340, 1018 340, 1225 244 C 1432 148, 1518 148, 1725 244 C 1932 340, 2018 340, 2225 244 C 2432 148, 2518 148, 2725 244"
         stroke-width="275" fill="transparent" stroke="hsla(184, 100%, 43.1%, 0.588)"
@@ -273,6 +259,20 @@
         stroke-width="40" fill="transparent" stroke="hsla(52, 100%, 54.9%, 0.628)"
         style="transform: translate(-33.576px);"></path>
 </svg>
+
+<main>
+  <header>
+    <h1>edwinm.github.io</h1>
+    <h2>GitHub home of Edwin Martin</h2>
+
+    <p><a href="https://github.com/edwinm">GitHub profile</a></p>
+    <p><a href="https://github.com/edwinm?tab=repositories&q=&type=source&language=&sort=">GitHub repositories</a></p>
+    <p><a href="https://bitstorm.org/">Bitstorm.org</a></p>
+    <p><a href="https://playgameoflife.com/">Play Game of Life</a></p>
+    <p><a href="https://bsky.app/profile/edwinm1.bsky.social">Bluesky</a></p>
+    <p><a href="https://mastodon.social/@edwin">Mastodon</a></p>
+  </header>
+</main>
 
 </body>
 </html>

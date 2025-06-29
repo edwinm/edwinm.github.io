@@ -80,10 +80,24 @@
     }
 
     main {
-      padding: calc(48vh - 25rem) 1rem 2rem;
+      padding: calc(80vh - 40rem) 1rem 2rem;
       margin: 0 calc(50vw - 20rem);
       height: calc(100vh - 6rem);
       overflow-y: auto;
+    }
+
+    .links {
+      columns: 2;
+      column-gap: 20px;
+
+      &>p {
+        margin: 0;
+      }
+
+      &>p>a {
+        display: inline-block;
+        padding: 8px 0;
+      }
     }
 
     @media (max-width: 50rem) {
@@ -120,6 +134,7 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       background-color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
     }
 
     .panel label {
@@ -264,14 +279,16 @@
   <header>
     <h1>edwinm.github.io</h1>
     <h2>GitHub home of Edwin Martin</h2>
+  </header>
 
+  <section class="links">
     <p><a href="https://github.com/edwinm">GitHub profile</a></p>
     <p><a href="https://github.com/edwinm?tab=repositories&q=&type=source&language=&sort=">GitHub repositories</a></p>
     <p><a href="https://bitstorm.org/">Bitstorm.org</a></p>
     <p><a href="https://playgameoflife.com/">Play Game of Life</a></p>
     <p><a href="https://bsky.app/profile/edwinm1.bsky.social">Bluesky</a></p>
     <p><a href="https://mastodon.social/@edwin">Mastodon</a></p>
-  </header>
+  </section>
 </main>
 
 </body>

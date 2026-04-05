@@ -26,7 +26,6 @@
       min-height: 100%;
       color: #202;
       font-family: MavenPro, Trebuchet MS, Arial, Helvetica, sans-serif;
-      overflow: hidden;
     }
 
     *,
@@ -46,7 +45,7 @@
     a {
       text-decoration: none;
       white-space: nowrap;
-      color: #000;
+      color: #3c739f;
       transition: all 250ms ease;
 
       &:hover {
@@ -82,22 +81,6 @@
     main {
       padding: calc(36vh - 14rem) 1rem 2rem;
       margin: 0 calc(50vw - 20rem);
-      height: calc(100vh - 6rem);
-      overflow-y: auto;
-    }
-
-    .links {
-      columns: 2;
-      column-gap: 20px;
-
-      &>p {
-        margin: 0;
-      }
-
-      &>p>a {
-        display: inline-block;
-        padding: 8px 0;
-      }
     }
 
     @media (max-width: 50rem) {
@@ -107,14 +90,8 @@
       }
     }
 
-    @media (max-width: 40rem) {
-      .links li {
-        min-width: 40%;
-      }
-    }
-
     .swirls {
-      position: absolute;
+      position: fixed;
       top: calc(30vh - 1rem - 18vw);
       width: 100vw;
       z-index: -1;
@@ -278,17 +255,53 @@
 <main>
   <header>
     <h1>edwinm.github.io</h1>
-    <h2>GitHub home of Edwin Martin</h2>
+    <h2>Actively maintained repositories of Edwin Martin</h2>
   </header>
 
-  <section class="links">
-    <p><a href="https://github.com/edwinm">GitHub profile</a></p>
-    <p><a href="https://github.com/edwinm?tab=repositories&q=&type=source&language=&sort=">GitHub repositories</a></p>
-    <p><a href="https://bitstorm.org/">Bitstorm.org</a></p>
-    <p><a href="https://playgameoflife.com/">Play Game of Life</a></p>
-    <p><a href="https://bsky.app/profile/edwinm1.bsky.social">Bluesky</a></p>
-    <p><a href="https://mastodon.social/@edwin">Mastodon</a></p>
-  </section>
+
+  <h3>JavaScript libraries</h3>
+
+  <h4><a href="https://github.com/edwinm/carbonium">carbonium</a></h4>
+
+  <p>One kilobyte library for easy DOM manipulation</p>
+
+  <h4><a href="https://github.com/edwinm/cuprum">cuprum</a></h4>
+
+  <p>Tiny RxJS like state management library</p>
+
+  <h4><a href="https://github.com/edwinm/web-component-decorator">web-component-decorator</a></h4>
+
+  <p>Lightweight TypeScript decorators for web components for easier handling of attribute changes and cleaner code</p>
+
+  <h4><a href="https://github.com/edwinm/memoize-cache-decorator">memoize-cache-decorator</a></h4>
+
+  <p>Add @memoize() to your class methods to have the result cached for future method calls.</p>
+
+  <h4><a href="https://github.com/edwinm/deep-query-selector-all">deep-query-selector-all</a></h4>
+
+  <p>deepQuerySelectorAll is like querySelectorAll but also finds elements inside web components and slots</p>
+
+  <h4><a href="https://github.com/edwinm/kilomega">kilomega</a></h4>
+
+  <p>Convert a certain bit or byte amount to the correct kilo/mega/giga amount.</p>
+
+  <h4><a href="https://github.com/edwinm/pringle">pringle</a></h4>
+
+  <p>Fast pseudorandom number generator</p>
+
+  <h3>Reference</h3>
+
+  <h4><a href="https://github.com/edwinm/frontend-snippets">frontend-snippets</a></h4>
+
+  <p>Miscellaneous code snippets for frontend web developers</p>
+
+  <h3>Tools</h3>
+
+  <h4><a href="https://github.com/edwinm/testProxy">testProxy</a></h4>
+
+  <p>Connect from (mobile) devices to your locally running, non public websites</p>
+
+
 </main>
 
 </body>
